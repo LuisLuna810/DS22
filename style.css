@@ -1,0 +1,175 @@
+/*INDEX*/
+
+body{
+    background-image: url("img/1.jpg");
+}
+
+.error{
+    color: red;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;}
+
+#contenedor-main {
+    display: grid;
+    grid-template-columns: 200px auto;
+    border-radius: 3px;
+    
+}
+
+#main-menu {
+    display: list-item;
+    background-color: bisque;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+#main-menu p {
+    margin-left: 5px;
+    color: black;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#main-menu a {
+    text-decoration: none;
+}
+
+.cont-homepage {
+    display: grid;
+    grid-gap: 15px 0px;
+    grid-template-columns: 180px;
+    background-color: aquamarine;
+    padding: 20px;
+    width: inherit;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.cont-homepage p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 570%;
+}
+
+/*AUTOGESTION*/
+#contenedor-form {
+    display: flex;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(199,199,199);
+    flex-direction: column;
+}
+
+.top-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.registrarse {
+    border-right: 1px solid gray;
+
+}
+
+.formulario {
+    background-color: rgb(199, 199, 199);
+    padding: 20px;
+}
+
+.formulario input, select{
+    width: 300px;
+    height: 27px;
+    border-radius: 3px;
+    border: 1px solid #ced4da;
+    color: #6c757d;
+    font-size: 17px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.formulario label {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.password{
+    display: flex;
+    align-items: flex-end;
+  }
+
+.box-2 button{
+    height: 31px;    
+}
+
+ .cont-registro-login{
+    display: flex;
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+  }
+
+.cont-registro{
+    width: 50%;
+}
+
+.cont-login{
+    padding-top: 43px;
+    width: 50%;
+}
+
+  .cont-login input{
+    color: #6c757d;
+    width: 300px;
+    height: 27px;
+    border-radius: 3px;
+    border: 1px solid #ced4da;
+    font-size: 17px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 12.5%;
+  }
+
+  .b-submit-register{
+    padding-left: 25%;
+}
+.b-submit-register input{
+    width: fit-content;
+    cursor: pointer;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;  
+ }
+
+ .b-submit-login{
+    padding-left: 28%;
+}
+.b-submit-login input{
+    width: fit-content;
+    cursor: pointer;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+ }
+
+
+
+
+
