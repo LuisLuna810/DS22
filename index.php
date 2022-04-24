@@ -11,7 +11,7 @@
     <div id="contenedor-main">
         <div id="main-menu">
             <a href="index.php"><p>Home</p></a> <hr>
-            <a href="autogestion.php"><p>Autogestion</p></a> <hr>
+            <a href="registrarse-ingresar.php"><p>Registrarse / Ingresar</p></a> <hr>
         </div>
         <div class="cont-homepage">
         <p>What is Lorem Ipsum?
