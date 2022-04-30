@@ -37,7 +37,7 @@
                 <div class="cont-registro">
                     <form class="formulario" method="post" action="">
                         <label>CUIL</label><br>
-                        <input type="number" name="cuil" minlength="11" maxlength="11" value="<?php if (isset($id_Asociado)) echo $id_Asociado; ?>" required><br>
+                        <input type="number" name="cuil" minlength="11" value="<?php if (isset($id_Asociado)) echo $id_Asociado; ?>" required><br>
                         <label>Nombre</label><br>
                         <input type="text" name="nombre" value="<?php if (isset($nombre)) echo $nombre; ?>" required><br>
                         <label>Apellido</label><br>
@@ -46,31 +46,33 @@
                         <input style="width: 180px;" type="date" name="fecha_Nacimiento" value="<?php if (isset($fecha_Nacimiento)) echo $fecha_Nacimiento; ?>" required><br>
                         <label>Es donante</label><br>
                         <select style="width: 100px;  height: 30px; font-size: 17px; border-radius: 3px" name="donante" value="<?php if (isset($sangre)) echo $sangre; ?>" required>
-                            <option value="1">SI</option>
-                            <option value="0">NO</option>
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
                         </select><br>
                         <div class="b-submit-register">
-                            <input type="submit" name="submit">
+                            <input type="submit" value="Registrar" name="submit">
                         </div>
                     </form>
                     <?php
-                        require_once("datos.php");
+                        require_once("asociados.php");
                         if (isset($_POST["submit"])) {
-                            $asociado = new Asociados;
-                            $asociado->id_Asociado = $_POST["cuil"];
-                            $asociado->nombre = $_POST["nombre"];
-                            $asociado->apellido = $_POST["apellido"];
-                            $asociado->es_Donante = $_POST["donante"];
-                            $asociado->fecha_Nacimiento = $_POST["fecha_Nacimiento"];
-                            $asociado->insertar();
+                            $reg_Asociado = new Asociados;
+                            $reg_Asociado->id_Asociado = $_POST["cuil"];
+                            $reg_Asociado->nombre = $_POST["nombre"];
+                            $reg_Asociado->apellido = $_POST["apellido"];
+                            $reg_Asociado->es_Donante = $_POST["donante"];
+                            $reg_Asociado->fecha_Nacimiento = $_POST["fecha_Nacimiento"];
+                            $reg_Asociado->registrar();
                         } 
                     ?>
                 </div>
                 <!-- Autogestion -> login -->
-                <div class="cont-login">
-                    <input type="number" id="cuil-socio" placeholder="Ingresar CUIL del asociado">
+                <div class="cont-login" >
+                    <form method="POST" action="validar-session.php">
+                    <input type="number" id="cuil-socio" name="cuil-socio" placeholder="Ingresar CUIL del asociado">
                     <div class="b-submit-login">
-                        <input id="Ingresar" type="submit" value="Ingresar">
+                    <input type="submit" value="Ingresar" name="ingresar">
+                    </form>
                     </div>
                 </div>
             </div>
