@@ -6,11 +6,12 @@
         public $apellido;
         public $es_Donante;
         public $fecha_Nacimiento;
+        public $enfermedades;
 
         public function registrar(){
             $this->conectar_DB();
-            $query = mysqli_prepare($this->enlace,"INSERT INTO asociado VALUES (?,?,?,?,?)");
-            $query->bind_param("issis",$this->id_Asociado, $this->nombre, $this->apellido, $this->es_Donante, $this->fecha_Nacimiento);
+            $query = mysqli_prepare($this->enlace,"INSERT INTO asociado VALUES (?,?,?,?,?,?)");
+            $query->bind_param("isssss",$this->id_Asociado, $this->nombre, $this->apellido, $this->es_Donante, $this->fecha_Nacimiento, $this->enfermedades);
             $query->execute();
 
             #$verificar =mysqli_prepare($this->enlace, "SELECT ? FROM asociados");
@@ -29,7 +30,7 @@
             $resultado = mysqli_query($this->enlace,$sql);
 
             if ($resultado->num_rows == 1) {
-                header("Location: autogestion.php");
+                header("Location: datos-personales.php");
                 die();
             }else{ 
                 include_once("registrarse-ingresar.php");
@@ -45,7 +46,12 @@
             $datos_Asociado = ("SELECT * FROM asociado WHERE id_Asociado= $this->id_Asociado ");
             $resultado = mysqli_query($this->enlace,$datos_Asociado);
             $row= mysqli_fetch_assoc($resultado);
-            echo $row[$column];
+            return $row[$column];
         }
+    }
+
+
+    class Donacion extends Conexion{
+        
     }
 ?>

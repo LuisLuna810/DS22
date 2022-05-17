@@ -45,7 +45,12 @@
                         <label>Fecha nacimiento</label><br>
                         <input style="width: 180px;" type="date" name="fecha_Nacimiento" value="<?php if (isset($fecha_Nacimiento)) echo $fecha_Nacimiento; ?>" required><br>
                         <label>Es donante</label><br>
-                        <select style="width: 100px;  height: 30px; font-size: 17px; border-radius: 3px" name="donante" value="<?php if (isset($sangre)) echo $sangre; ?>" required>
+                        <select style="width: 100px;  height: 30px; font-size: 17px; border-radius: 3px" name="donante" value="<?php if (isset($donante)) echo $donante; ?>" required>
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                        </select><br>
+                        <label>Posee enfermedades cronicas</label><br>
+                        <select style="width: 100px;  height: 30px; font-size: 17px; border-radius: 3px" name="enfermedades" required>
                             <option value="SI">SI</option>
                             <option value="NO">NO</option>
                         </select><br>
@@ -62,6 +67,7 @@
                             $reg_Asociado->apellido = $_POST["apellido"];
                             $reg_Asociado->es_Donante = $_POST["donante"];
                             $reg_Asociado->fecha_Nacimiento = $_POST["fecha_Nacimiento"];
+                            $reg_Asociado->enfermedades = $_POST["enfermedades"];
                             $reg_Asociado->registrar();
                         } 
                     ?>

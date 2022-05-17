@@ -29,11 +29,7 @@ if (isset($_SESSION['id'])){
     <div id="contenedor-main">
         <!-- Menu navegación-->
         <div id="main-menu">
-            <a href="index.php">
-                <p>Home</p>
-            </a>
-            <hr>
-            <a href="datosAutogestion.php">
+            <a href="datos-personales.php">
                 <p>Datos personales</p>
             </a>
             <hr>
@@ -56,23 +52,41 @@ if (isset($_SESSION['id'])){
 
         <div id="contenedor-form">
                 <div>
-            <h4>Nombre</h4>
-
+            <h2>Nombre</h2>
             <?php
-                $datos->datos("nombre");
+                $nombre = $datos->datos("nombre");
+                echo $nombre;
             ?>
-            <h4>Apellido</h4>
+            <h2>Apellido</h2>
             <?php
-                $datos->datos("apellido");
-            ?>
-            <h4>Es donante</h4>
+                $apellido = $datos->datos("apellido");
+                echo $apellido;            ?>
+            <h2>Es donante</h2>
             <?php
-                $datos->datos("esDonante");
+               $esDonante = $datos->datos("esDonante");
+               echo $esDonante;            
             ?>
-            <h4>Fecha nacimiento</h4>
+            <h2>Fecha nacimiento</h2>
             <?php
-                $datos->datos("fecha_Nacimiento");
-            ?>
+                $fecha_Nac = $datos->datos("fecha_Nacimiento");
+                echo $fecha_Nac;               
+                ?>
+            <h2>Presenta enfermedades cronicas</h2>
+            <?php
+                $enfermedades = $datos->datos("enfermedades");
+                echo $enfermedades;               
+                ?>
+            <h2>Tipo de usuario</h2>
+            <?php 
+                $row = strtotime($datos->datos("fecha_Nacimiento"));
+                $fecha_Actual = strtotime(date('Y-m-d'));
+                $edad = intval(($fecha_Actual-$row)/60/60/24/365.25);
+                if ($edad>=18 && $edad<=56 && $esDonante== "SI" && $enfermedades=="NO"){
+                    echo "Activo";
+                }else{
+                    echo "Pasivo";
+                }
+            ?>  
                 </div>
             </div>
 
