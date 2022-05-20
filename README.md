@@ -7,12 +7,12 @@ Se tiene un circulo de sangre RH Negativo donde se busca generar la autoprotecci
 
 Para registrarse, se debe ingresar el DNI, nombre, apellido, fecha de nacimiento, domicilio, localidad, fecha de nacimiento, teléfono, email, grupo sanguíneo y factor, también deberá informar si posee alguna enfermedad cronica y medicación.
 
-El banco de Sangre (es una institución que genera pedidos de donación para cubrir a algún socio del circulo) pide esporadicamente donaciones, cuando estos pedidos llegan se busca a los donantes activos que menos donaron, una persona queda excluida sí donó más de 2 veces en el año. Además el banco de sangre avisa semanalmente cuando los asociados que donaron.
+El banco de Sangre (es una institución que genera pedidos de donación para cubrir a algún socio del circulo) pide esporadicamente donaciones, cuando estos pedidos llegan se busca a los donantes activos que menos donaron, una persona queda excluida sí donó más de 2 veces en el año. Además el banco de sangre avisa semanalmente los asociados que donaron.
 
 Mensualmente se hace un listado de los asociados con cuotas no pagas, además gerencia cada cierto tiempo pide un listado de cuotas pagas mostrado porcentualmente y divido por categorias de asociados.
 <hr>
 <h1>Diagrama de entidades</h1>
-<p>El siguiente diagrama se confesiono para poder crear la base de datos y su relaciones</p>
+<p>El siguiente diagrama se confecciono para poder crear la base de datos y su relaciones</p>
 
 [![diagrama.jpg](https://i.postimg.cc/7bv2HXVp/diagrama.jpg)](https://postimg.cc/wRVvFXnV)
 
