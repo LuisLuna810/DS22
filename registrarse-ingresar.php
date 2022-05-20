@@ -20,7 +20,7 @@
             </a>
             <hr>
             <a href="registrarse-ingresar.php">
-                <p>Registrarse / Ingresar</p>
+                <p>Registrar / Ingresar</p>
             </a>
             <hr>
         </div>
@@ -28,8 +28,8 @@
         <div id="contenedor-form">
             <!-- Top-->
             <div class="top-form">
-                <p class="registrarse">Registrarse</p>
-                <p>Ingresar al sistema</p>
+                <p class="registrarse">Registrar</p>
+                <p>Gestionar usuario</p>
             </div>
 
             <!-- Autogestion -> Contenedor registro / login-->

@@ -1,5 +1,6 @@
 <?php 
 require_once ("asociados.php");
+require_once ("classDonaciones.php");
 session_start(); 
 $varsesion = $_SESSION['id'];
 if($varsesion == null || $varsesion = ''){
@@ -20,7 +21,7 @@ if (isset($_SESSION['id'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Register / Login</title>
+    <title>Datos personales</title>
 </head>
 
 <body>
@@ -37,7 +38,7 @@ if (isset($_SESSION['id'])){
                 <p>Cuotas</p>
             </a>
             <hr>
-            <a href="donarAutogestion.php">
+            <a href="donar.php">
                 <p>Donar</p>
             </a>
             <hr>
@@ -83,8 +84,10 @@ if (isset($_SESSION['id'])){
                 $edad = intval(($fecha_Actual-$row)/60/60/24/365.25);
                 if ($edad>=18 && $edad<=56 && $esDonante== "SI" && $enfermedades=="NO"){
                     echo "Activo";
+                    $_SESSION["condicion"] = 1;
                 }else{
                     echo "Pasivo";
+                    $_SESSION["condicion"] = 0;
                 }
             ?>  
                 </div>

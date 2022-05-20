@@ -49,9 +49,4 @@
             return $row[$column];
         }
     }
-
-
-    class Donacion extends Conexion{
-        
-    }
 ?>
