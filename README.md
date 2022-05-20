@@ -13,21 +13,36 @@ Mensualmente se hace un listado de los asociados con cuotas no pagas, además ge
 <hr>
 <h1>Diagrama de entidades</h1>
 <p>El siguiente diagrama se confesiono para poder crear la base de datos y su relaciones</p>
-<img  src="\resources\diagrama.jpg">
+
+[![diagrama.jpg](https://i.postimg.cc/7bv2HXVp/diagrama.jpg)](https://postimg.cc/wRVvFXnV)
+
 <hr>
 <h1>Prototipo</h1>
 <p>Este prototipo se creo para tener una idea de como quedaria la interfaz de usuario y los datos que se ingresaran/mostraran en la misma</p>
 <p>1- Home <br>En esta pagina se mostraran aquellos asociados que hayan realizado donaciones en la semana, ademas tambien habra un listado del porcentaje de aquellos asociados que tengan cuotas impagas y estaran divididos segun su tipo (activo / pasivo)  </p>
-<img src="\resources\Prototipo\1-Home.PNG">
+
+[![1-Home.png](https://i.postimg.cc/tJdX65y0/1-Home.png)](https://postimg.cc/0KQRR7bZ)
+
 <p>2- Registrar/Ingresar <br>En esta pagina se podran registrar aquel usuario que quiera pertenecer al circulo de sangre, ademas con el cuil del mismo se podra ingresar para gestionarlo</p>
-<img src="\resources\Prototipo\2-Registrar-Ingresar.PNG">
+
+[![2-Registrar-Ingresar.png](https://i.postimg.cc/Pf1f0tD6/2-Registrar-Ingresar.png)](https://postimg.cc/238fZN2v)
+
 <p>3- Gestion-Usuario <br>Una vez ingresado el cuil del asociado ya registrado, se lo enviara a esta pagina donde se mostraran todos su datos personales y ademas podra editarlos</p>
-<img src="\resources\Prototipo\3-Gestion-Usuario.png">
+
+[![3-Gestion-Usuario.png](https://i.postimg.cc/cLLsKwbj/3-Gestion-Usuario.png)](https://postimg.cc/7fjvdGDM)
+
 <p>4- Cuotas <br>En esta pagina el asociado podra verificar las cuotas que tiene impagas ademas tambien podra ponerse al dia con la opcion de pagar las mismas</p>
-<img src="\resources\Prototipo\4-Cuotas.png">
+
+[![4-Cuotas.png](https://i.postimg.cc/650W5YYn/4-Cuotas.png)](https://postimg.cc/N5Kqd7hj)
+
 <p>5- siDonar <br>En esta pagina el asociado podra solicitar la fecha en la que realizara la donacion, solo podra acceder a este apartado aquel asociado que sea de tipo ACTIVO</p>
-<img src="\resources\Prototipo\5-siDonar.png">
+
+[![5-si-Donar.png](https://i.postimg.cc/3xf32WMw/5-si-Donar.png)](https://postimg.cc/zyWmrzGm)
+
 <p>5.1- NODonar <br>Esta seccion aparecera para aquel asociado que sea de tipo PASIVO y no este autorizado a realizar donaciones</p>
-<img src="\resources\Prototipo\5.1-noDonar.png">
+
+[![5-1-no-Donar.png](https://i.postimg.cc/X73NbTcn/5-1-no-Donar.png)](https://postimg.cc/vDqw72NK)
+
 <p>6- Solicitar <br>Esta seccion le permitira al asociado realizar una solicitud de donacion y elegir la fecha en la que se llevara a cabo la misma</p>
-<img src="\resources\Prototipo\6-Solicitar.png">
+
+[![6-Solicitar.png](https://i.postimg.cc/N0yBDYYk/6-Solicitar.png)](https://postimg.cc/KKy6c611)
