@@ -1,13 +1,13 @@
-<?php 
-require_once ("asociados.php");
-require_once ("classDonaciones.php");
-session_start(); 
+<?php
+require_once("asociados.php");
+require_once("classDonaciones.php");
+session_start();
 $varsesion = $_SESSION['id'];
-if($varsesion == null || $varsesion = ''){
+if ($varsesion == null || $varsesion = '') {
     echo "ACCESO DENEGADO";
     die();
 }
-if (isset($_SESSION['id'])){
+if (isset($_SESSION['id'])) {
     $datos = new Asociados;
     $datos->id_Asociado = $_SESSION['id'];
 }
@@ -52,50 +52,61 @@ if (isset($_SESSION['id'])){
         </div>
 
         <div id="contenedor-form">
-                <div>
-            <h2>Nombre</h2>
-            <?php
+            <div>
+                <h2>Nombre</h2>
+                <?php
                 $nombre = $datos->datos("nombre");
                 echo $nombre;
-            ?>
-            <h2>Apellido</h2>
-            <?php
+                ?>
+                <h2>Apellido</h2>
+                <?php
                 $apellido = $datos->datos("apellido");
                 echo $apellido;            ?>
-            <h2>Es donante</h2>
-            <?php
-               $esDonante = $datos->datos("esDonante");
-               echo $esDonante;            
-            ?>
-            <h2>Fecha nacimiento</h2>
-            <?php
+                <h2>Es donante</h2>
+                <?php
+                $esDonante = $datos->datos("esDonante");
+                echo $esDonante;
+                ?>
+                <h2>Fecha nacimiento</h2>
+                <?php
                 $fecha_Nac = $datos->datos("fecha_Nacimiento");
-                echo $fecha_Nac;               
+                echo $fecha_Nac;
                 ?>
-            <h2>Presenta enfermedades cronicas</h2>
-            <?php
+                <h2>Presenta enfermedades cronicas</h2>
+                <?php
                 $enfermedades = $datos->datos("enfermedades");
-                echo $enfermedades;               
+                echo $enfermedades;
                 ?>
-            <h2>Tipo de usuario</h2>
-            <?php 
+                <h2>Tipo de usuario</h2>
+                <?php
                 $row = strtotime($datos->datos("fecha_Nacimiento"));
                 $fecha_Actual = strtotime(date('Y-m-d'));
-                $edad = intval(($fecha_Actual-$row)/60/60/24/365.25);
-                if ($edad>=18 && $edad<=56 && $esDonante== "SI" && $enfermedades=="NO"){
+                $edad = intval(($fecha_Actual - $row) / 60 / 60 / 24 / 365.25);
+                if ($edad >= 18 && $edad <= 56 && $esDonante == "SI" && $enfermedades == "NO") {
                     echo "Activo";
-                    $_SESSION["condicion"] = 1;
-                }else{
+                } else {
                     echo "Pasivo";
-                    $_SESSION["condicion"] = 0;
                 }
-            ?>  
+                ?>
+                <div class="b-actualizar">
+                    <a href="editarDatos.php?id=<?php echo $datos->id_Asociado ?>">Editar datos</a>
+                    <a onclick="confirmar()" class="eliminar">Eliminar</a>
                 </div>
             </div>
-
         </div>
-    </div>
-    </div>
-</body>
 
+    </div>
+    </div>
+    </div>
+    <script>
+                    function confirmar(e) {
+                        if (confirm('Estas seguro de eliminar el asociado')) {
+                            window.location.href = "eliminarAsociado.php?id=<?php echo $datos->id_Asociado ?>"
+                        } else {
+                            e.preventDefault();
+                        }
+                        let $link = document.querySelectorAll(".eliminar");
+                    }
+                </script>"
+</body>
 </html>

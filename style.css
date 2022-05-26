@@ -169,6 +169,32 @@ body{
     color: white;
  }
 
+ .b-editar{
+     width: 25%;
+     margin: 0px 62% 0px auto;
+     
+ }
+ .b-editar input{
+    width: fit-content;
+    cursor: pointer;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+ }
+
+ .b-actualizar{
+    width: 25%;
+    margin: 0px 65% 0px auto;
+ }
+
+ .b-actualizar a{
+    width: fit-content;
+    cursor: pointer;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+ }
+
 
 
 

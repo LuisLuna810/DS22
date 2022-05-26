@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2022 a las 19:36:36
+-- Tiempo de generación: 27-05-2022 a las 01:31:32
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -31,9 +31,21 @@ CREATE TABLE `asociado` (
   `id_Asociado` bigint(11) NOT NULL,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
-  `esDonante` tinyint(1) NOT NULL,
-  `fecha_Nacimiento` date NOT NULL
+  `esDonante` varchar(2) NOT NULL,
+  `fecha_Nacimiento` date NOT NULL,
+  `enfermedades` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `asociado`
+--
+
+INSERT INTO `asociado` (`id_Asociado`, `nombre`, `apellido`, `esDonante`, `fecha_Nacimiento`, `enfermedades`) VALUES
+(9848621487, 'Jorge', 'Lopez', 'SI', '1998-09-19', 'SI'),
+(20426394481, 'Luis Agustin', 'Luna', 'SI', '2000-07-14', 'NO'),
+(20432344327, 'Ezequiel', 'Bruno', 'NO', '2001-01-06', 'NO'),
+(20435679865, 'Martin', 'Palermo', '1', '2001-07-09', ''),
+(58987896535, 'Martin', 'Magariños', 'SI', '2022-05-16', 'NO');
 
 -- --------------------------------------------------------
 

@@ -48,5 +48,24 @@
             $row= mysqli_fetch_assoc($resultado);
             return $row[$column];
         }
+
+        public function editar()
+        {
+            $this->conectar_DB();
+            $editar = mysqli_query($this->enlace,"UPDATE asociado SET nombre = '$this->nombre' , apellido= '$this->apellido' , esDonante= '$this->es_Donante' , fecha_Nacimiento= '$this->fecha_Nacimiento' , enfermedades= '$this->enfermedades' WHERE id_Asociado= '$this->id_Asociado' "); 
+            if ($editar){
+                echo '<H2 style="color:red; font-family: sans-serif;">*Datos actualizados correctamente</H2>';
+                }else{
+                    echo '<H2 style="color:red; font-family: sans-serif;">*ERROR: los datos no se actualizaron</H2>';
+                }
+        }
+
+        public function eliminarAsociado(){
+            $this->conectar_DB();
+            $eliminarAsociado = mysqli_query($this->enlace,"DELETE FROM asociado WHERE id_Asociado = '$this->id_Asociado' ");
+            if($eliminarAsociado){
+                header("Location: index.php");
+            }
+        }
     }
 ?>
