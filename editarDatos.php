@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', '1');
+/*ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+error_reporting(E_ALL);*/
 require_once("asociados.php");
 $id = $_GET["id"];
 if ($id == null || $id = '') {
@@ -37,10 +37,6 @@ if ($id == null || $id = '') {
             <hr>
             <a href="donar.php">
                 <p>Donar</p>
-            </a>
-            <hr>
-            <a href="solicitarAutogestion.php">
-                <p>Solicitar</p>
             </a>
             <hr>
             <a href="cerrar-session.php">

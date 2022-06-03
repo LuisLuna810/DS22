@@ -23,6 +23,10 @@
                 <p>Registrar / Ingresar</p>
             </a>
             <hr>
+            <a href="solicitante.php">
+                <p>Solicitante</p>
+            </a>
+            <hr>
         </div>
 
         <div id="contenedor-form">

@@ -14,9 +14,10 @@
             $query->bind_param("isssss",$this->id_Asociado, $this->nombre, $this->apellido, $this->es_Donante, $this->fecha_Nacimiento, $this->enfermedades);
             $query->execute();
 
-            #$verificar =mysqli_prepare($this->enlace, "SELECT ? FROM asociados");
-            #$verificar->bind_param("i",$this->id_Asociado)
-            
+            if(($query->affected_rows) == -1){
+                echo "<script>alert('Usuario ya registrado')</script>";
+            }
+
             if(!$query->execute()){
                 echo "<h3>DATOS REGISTRADOS CORRECTAMENTE</h3> <br>";
             }else{

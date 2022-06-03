@@ -12,6 +12,10 @@
         <div id="main-menu">
             <a href="index.php"><p>Home</p></a> <hr>
             <a href="registrarse-ingresar.php"><p>Registrar / Ingresar</p></a> <hr>
+            <a href="solicitante.php">
+                <p>Solicitante</p>
+            </a>
+            <hr>
         </div>
         <div class="cont-homepage">
         <p>What is Lorem Ipsum?

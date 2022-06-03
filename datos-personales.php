@@ -42,17 +42,13 @@ if (isset($_SESSION['id'])) {
                 <p>Donar</p>
             </a>
             <hr>
-            <a href="solicitarAutogestion.php">
-                <p>Solicitar</p>
-            </a>
-            <hr>
             <a href="cerrar-session.php">
                 <p>Cerrar Sesion</p>
             </a>
         </div>
 
         <div id="contenedor-form">
-            <div>
+            <div class="formulario">
                 <h2>Nombre</h2>
                 <?php
                 $nombre = $datos->datos("nombre");
@@ -88,9 +84,9 @@ if (isset($_SESSION['id'])) {
                     echo "Pasivo";
                 }
                 ?>
-                <div class="b-actualizar">
-                    <a href="editarDatos.php?id=<?php echo $datos->id_Asociado ?>">Editar datos</a>
-                    <a onclick="confirmar()" class="eliminar">Eliminar</a>
+                <div class="botonera" style="margin-top: 10px;">
+                    <div class="b-actualizar"><a  href="editarDatos.php?id=<?php echo $datos->id_Asociado ?>">Editar datos</a></div>
+                    <div class="b-actualizar b-eliminar"><a onclick="confirmar()" class="eliminar">Eliminar asociado</a></div>
                 </div>
             </div>
         </div>
